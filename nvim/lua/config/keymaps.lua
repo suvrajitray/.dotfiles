@@ -15,13 +15,8 @@ keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true }
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
 -- windows
-keymap.set("n", "<leader>wh", "<C-W>s", { desc = "Split Window Below", remap = true })
-keymap.set("n", "<leader>wv", "<C-W>v", { desc = "Split Window Right", remap = true })
 keymap.set("n", "<leader>-", "<C-W>s", { desc = "Split Window Below", remap = true })
 keymap.set("n", "<leader>|", "<C-W>v", { desc = "Split Window Right", remap = true })
-keymap.set("n", "<leader>wm", function()
-  LazyVim.toggle.maximize()
-end, { desc = "Maximize Toggle" })
 
 -- Resize window using <ctrl> arrow keys
 keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })

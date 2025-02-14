@@ -41,7 +41,7 @@ local config = wezterm.config_builder()
 
 -- font settings
 config.font_size = 17
-config.line_height = 1.2
+-- config.line_height = 1.2
 config.font = wezterm.font("Hack Nerd Font")
 config.colors = {
 	cursor_bg = "white",
@@ -59,7 +59,7 @@ config.window_padding = {
 }
 -- config.color_scheme = "Tokyo Night"
 config.color_scheme = "Catppuccin Macchiato"
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"
 -- config.hide_tab_bar_if_only_one_tab = true
 --
