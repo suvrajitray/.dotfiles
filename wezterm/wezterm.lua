@@ -39,16 +39,25 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+-- check which OS we are using.
+-- https://github.com/wez/wezterm/discussions/4728
+local is_darwin = wezterm.target_triple:find("darwin") ~= nil -- macOS
+local is_linux = wezterm.target_triple:find("linux") ~= nil -- linux
+
 -- font settings
 config.font_size = 17
--- config.line_height = 1.2
 config.font = wezterm.font("Hack Nerd Font")
 config.colors = {
 	cursor_bg = "white",
 	cursor_border = "white",
 }
--- default program to start
-config.default_prog = { "pwsh.exe", "-NoLogo" }
+
+-- config.line_height = 1.2
+
+-- default program to start (only for windows)
+if not is_darwin and not is_linux then
+	config.default_prog = { "pwsh.exe", "-NoLogo" }
+end
 
 -- apperance
 config.window_padding = {
@@ -61,16 +70,17 @@ config.window_padding = {
 config.color_scheme = "Catppuccin Macchiato"
 config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"
--- config.hide_tab_bar_if_only_one_tab = true
---
-config.macos_window_background_blur = 10
+config.hide_tab_bar_if_only_one_tab = true
+if is_darwin then
+	config.macos_window_background_blur = 10
+end
 
 -- misc
 config.max_fps = 120
 config.prefer_egl = true
 
 -- tmux
-config.leader = { key = "q", mods = "ALT", timeout_milliseconds = 2000 }
+config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 5000 }
 config.keys = {
 	{
 		mods = "LEADER",
@@ -154,7 +164,7 @@ for i = 0, 9 do
 end
 
 -- tab bar
--- config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
