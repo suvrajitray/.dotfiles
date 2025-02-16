@@ -67,10 +67,9 @@ config.window_padding = {
 	bottom = 0,
 }
 -- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Catppuccin Mocha"
 config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"
-config.hide_tab_bar_if_only_one_tab = true
 if is_darwin then
 	config.macos_window_background_blur = 10
 end
