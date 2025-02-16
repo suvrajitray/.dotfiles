@@ -58,3 +58,6 @@ keymap.set(
   '"_x',
   { desc = "delete a character without affecting the register", silent = true, noremap = true }
 )
+
+-- quit all with leader
+keymap.set("n", "<leader>qa", ":qa<enter>", { desc = "Quit All!", silent = true, noremap = false })
