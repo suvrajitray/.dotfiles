@@ -46,7 +46,8 @@ local is_linux = wezterm.target_triple:find("linux") ~= nil -- linux
 
 -- font settings
 config.font_size = 17
-config.font = wezterm.font("Hack Nerd Font")
+-- config.font = wezterm.font("Hack Nerd Font")
+config.font = wezterm.font("JetBrains Mono")
 config.colors = {
 	cursor_bg = "white",
 	cursor_border = "white",
@@ -67,7 +68,8 @@ config.window_padding = {
 	bottom = 0,
 }
 -- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Kanagawa (Gogh)"
 config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"
 if is_darwin then
