@@ -53,15 +53,6 @@ return {
             },
         },
     },
-    -- {
-    --   "rebelot/kanagawa.nvim",
-    --   opts = {
-    --     transparent = true,
-    --     lazy = false,
-    --     priority = 1000,
-    --     compile = true,
-    --   },
-    -- },
     {
         "thesimonho/kanagawa-paper.nvim",
         lazy = false,
