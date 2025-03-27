@@ -46,14 +46,15 @@ local is_linux = wezterm.target_triple:find("linux") ~= nil -- linux
 
 -- font settings
 config.font_size = 17
--- config.font = wezterm.font("Hack Nerd Font")
-config.font = wezterm.font("JetBrains Mono")
+config.font = wezterm.font("Hack Nerd Font")
+-- config.font = wezterm.font("JetBrains Mono")
+
 config.colors = {
 	cursor_bg = "white",
 	cursor_border = "white",
 }
 
--- config.line_height = 1.2
+config.line_height = 1.3
 
 -- default program to start (only for windows)
 if not is_darwin and not is_linux then
