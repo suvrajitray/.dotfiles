@@ -69,8 +69,8 @@ config.window_padding = {
 	bottom = 0,
 }
 -- config.color_scheme = "Tokyo Night"
--- config.color_scheme = "Catppuccin Mocha"
-config.color_scheme = "Kanagawa (Gogh)"
+config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Kanagawa (Gogh)"
 config.window_background_opacity = 0.95
 -- config.window_decorations = "RESIZE"
 if is_darwin then
