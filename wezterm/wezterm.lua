@@ -50,11 +50,11 @@ config.font = wezterm.font("Hack Nerd Font")
 -- config.font = wezterm.font("JetBrains Mono")
 
 config.colors = {
-	cursor_bg = "white",
-	cursor_border = "white",
+	-- cursor_bg = "white",
+	-- cursor_border = "white",
 }
 
-config.line_height = 1.3
+config.line_height = 1.2
 
 -- default program to start (only for windows)
 if not is_darwin and not is_linux then
@@ -68,10 +68,16 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
--- config.color_scheme = "Tokyo Night"
-config.color_scheme = "Catppuccin Mocha"
--- config.color_scheme = "Kanagawa (Gogh)"
-config.window_background_opacity = 0.95
+
+config.window_padding = {
+	left = "0cell",
+	right = "0cell",
+	top = "0.5cell",
+	bottom = "0cell",
+}
+
+config.color_scheme = "rose-pine"
+config.window_background_opacity = 0.97
 -- config.window_decorations = "RESIZE"
 if is_darwin then
 	config.macos_window_background_blur = 10

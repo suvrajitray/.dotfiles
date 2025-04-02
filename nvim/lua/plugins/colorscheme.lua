@@ -1,6 +1,6 @@
 return {
     -- add gruvbox
-    { "ellisonleao/gruvbox.nvim" },
+    { "ellisonleao/gruvbox.nvim", opts = { transparent_mode = true } },
     {
         "tokyonight.nvim",
         opts = {
@@ -60,11 +60,31 @@ return {
             end,
         },
     },
+    {
+        "sainnhe/gruvbox-material",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            -- Optionally configure and load the colorscheme
+            -- directly inside the plugin declaration.
+            vim.g.gruvbox_material_enable_italic = true
+            vim.g.gruvbox_material_transparent_background = true
+        end,
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        opts = {
+            styles = {
+                transparency = true,
+            },
+        },
+    },
     -- Configure LazyVim to load colorscheme.
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "catppuccin",
+            colorscheme = "rose-pine",
         },
     },
 }
