@@ -1,0 +1,34 @@
+working_directory = "C:\\"
+
+import = [
+  "~/AppData/Roaming/alacritty/themes/themes/rose-pine.toml"
+]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+TERM = "xterm-256color"
+
+[window]
+padding.x = 3
+padding.y = 3
+dimensions.columns = 125
+dimensions.lines = 30
+decorations = "Buttonless"
+opacity = 0.95
+blur = true
+
+[font]
+normal = { family = "Hack Nerd Font", style = "Regular" }
+size = 17
+
+[font.offset]
+y = 5  # Adjusts line height (increase for more space, decrease for less)
+
+[shell]
+program = "C:\\Program Files\\PowerShell\\7\\pwsh.exe"
+# program = "C:\\Windows\\System32\\wsl.exe"
+
+[mouse]
+bindings = [
+  { mouse = "Right", mods = "Control", action = "Paste" },
+]
