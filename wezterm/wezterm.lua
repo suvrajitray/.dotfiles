@@ -74,7 +74,7 @@ config.window_padding = {
 	bottom = "0cell",
 }
 
-config.color_scheme = "rose-pine"
+config.color_scheme = "tokyonight"
 config.window_background_opacity = 0.97
 -- config.window_decorations = "RESIZE"
 if is_darwin then
