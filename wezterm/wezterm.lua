@@ -45,9 +45,9 @@ local is_darwin = wezterm.target_triple:find("darwin") ~= nil -- macOS
 local is_linux = wezterm.target_triple:find("linux") ~= nil -- linux
 
 -- font settings
-config.font_size = 17
+config.font_size = 15
 config.font = wezterm.font("Hack Nerd Font")
-config.line_height = 1.2
+config.line_height = 1.1
 
 config.colors = {
 	-- cursor_bg = "white",
@@ -75,7 +75,7 @@ config.window_padding = {
 }
 
 config.color_scheme = "tokyonight"
-config.window_background_opacity = 0.97
+-- config.window_background_opacity = 0.97
 -- config.window_decorations = "RESIZE"
 if is_darwin then
 	config.macos_window_background_blur = 10
